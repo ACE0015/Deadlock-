@@ -1,0 +1,91 @@
+﻿<deadlock>
+<victim-list>
+<victimProcess id="process1e9a4d7d088" />
+</victim-list>
+<process-list>
+<process id="process1e9a4d7d088" taskpriority="0" logused="1056" waitresource="KEY: 6:72057594049986560 (18bcf2d1daeb)" waittime="5010" ownerId="114797" transactionname="user_transaction" lasttranstarted="2025-06-15T18:28:19.540" XDES="0x1e9bc894470" lockMode="U" schedulerid="3" kpid="6588" status="suspended" spid="52" sbid="0" ecid="0" priority="0" trancount="2" lastbatchstarted="2025-06-15T18:28:19.540" lastbatchcompleted="2025-06-15T18:28:19.540" lastattention="1900-01-01T00:00:00.540" clientapp="Microsoft SQL Server Management Studio - Query" hostname="DESKTOP-QE346C3" hostpid="10452" loginname="DESKTOP-QE346C3\nisha" isolationlevel="read committed (2)" xactid="114797" currentdb="6" currentdbname="AdventureWorks2022" lockTimeout="4294967295" clientoption1="671090784" clientoption2="390200">
+<stackFrames>
+<frame id="00" address="0x7FFA20F50BE4" pdb="ntdll.pdb" age="1" guid="E84AF4A1-E3CD-FABC-99A4-1209581EB686" module="ntdll" rva="0xA0BE4" /><frame id="01" address="0x7FFA1E723EC9" pdb="kernelbase.pdb" age="1" guid="8DE470CE-6A35-310D-EB2D-AA4415DC675E" module="kernelbase" rva="0x123EC9" /><frame id="02" address="0x7FF9BD8C69F7" pdb="SqlDK.pdb" age="2" guid="DF33C098-9A00-452D-959F-F820E68C8B32" module="SqlDK" rva="0x69F7" /><frame id="03" address="0x7FF9BD8C691B" pdb="SqlDK.pdb" age="2" guid="DF33C098-9A00-452D-959F-F820E68C8B32" module="SqlDK" rva="0x691B" /><frame id="04" address="0x7FF9BD8C1B2B" pdb="SqlDK.pdb" age="2" guid="DF33C098-9A00-452D-959F-F820E68C8B32" module="SqlDK" rva="0x1B2B" /><frame id="05" address="0x7FF9BD8C3A77" pdb="SqlDK.pdb" age="2" guid="DF33C098-9A00-452D-959F-F820E68C8B32" module="SqlDK" rva="0x3A77" /><frame id="06" address="0x7FF9C16A9665" pdb="sqlmin.pdb" age="2" guid="1F0A3AE1-83BC-4882-A450-D610CB534214" module="sqlmin" rva="0x89665" /><frame id="07" address="0x7FF9C16A9465" pdb="sqlmin.pdb" age="2" guid="1F0A3AE1-83BC-4882-A450-D610CB534214" module="sqlmin" rva="0x89465" /><frame id="08" address="0x7FF9C162FBB4" pdb="sqlmin.pdb" age="2" guid="1F0A3AE1-83BC-4882-A450-D610CB534214" module="sqlmin" rva="0xFBB4" /><frame id="09" address="0x7FF9C1639EA8" pdb="sqlmin.pdb" age="2" guid="1F0A3AE1-83BC-4882-A450-D610CB534214" module="sqlmin" rva="0x19EA8" /><frame id="10" address="0x7FF9C163EB48" pdb="sqlmin.pdb" age="2" guid="1F0A3AE1-83BC-4882-A450-D610CB534214" module="sqlmin" rva="0x1EB48" /><frame id="11" address="0x7FF9C163A7BA" pdb="sqlmin.pdb" age="2" guid="1F0A3AE1-83BC-4882-A450-D610CB534214" module="sqlmin" rva="0x1A7BA" /><frame id="12" address="0x7FF9C163B1EF" pdb="sqlmin.pdb" age="2" guid="1F0A3AE1-83BC-4882-A450-D610CB534214" module="sqlmin" rva="0x1B1EF" /><frame id="13" address="0x7FF9C163B2D3" pdb="sqlmin.pdb" age="2" guid="1F0A3AE1-83BC-4882-A450-D610CB534214" module="sqlmin" rva="0x1B2D3" /><frame id="14" address="0x7FF9C169E9D9" pdb="sqlmin.pdb" age="2" guid="1F0A3AE1-83BC-4882-A450-D610CB534214" module="sqlmin" rva="0x7E9D9" /><frame id="15" address="0x7FF9BDEC1A67" pdb="SqlTsEs.pdb" age="2" guid="30BAAA79-460F-4350-A578-D09A021A9C41" module="SqlTsEs" rva="0x1A67" /><frame id="16" address="0x7FF9C169CAF6" pdb="sqlmin.pdb" age="2" guid="1F0A3AE1-83BC-4882-A450-D610CB534214" module="sqlmin" rva="0x7CAF6" /><frame id="17" address="0x7FF9C16402C9" pdb="sqlmin.pdb" age="2" guid="1F0A3AE1-83BC-4882-A450-D610CB534214" module="sqlmin" rva="0x202C9" /><frame id="18" address="0x7FF9C166A7B5" pdb="sqlmin.pdb" age="2" guid="1F0A3AE1-83BC-4882-A450-D610CB534214" module="sqlmin" rva="0x4A7B5" /><frame id="19" address="0x7FF9C16402C9" pdb="sqlmin.pdb" age="2" guid="1F0A3AE1-83BC-4882-A450-D610CB534214" module="sqlmin" rva="0x202C9" /><frame id="20" address="0x7FF9C166A27B" pdb="sqlmin.pdb" age="2" guid="1F0A3AE1-83BC-4882-A450-D610CB534214" module="sqlmin" rva="0x4A27B" /><frame id="21" address="0x7FF9C16402C9" pdb="sqlmin.pdb" age="2" guid="1F0A3AE1-83BC-4882-A450-D610CB534214" module="sqlmin" rva="0x202C9" /><frame id="22" address="0x7FF9C1F6637E" pdb="sqlmin.pdb" age="2" guid="1F0A3AE1-83BC-4882-A450-D610CB534214" module="sqlmin" rva="0x94637E" /><frame id="23" address="0x7FF9C1F65594" pdb="sqlmin.pdb" age="2" guid="1F0A3AE1-83BC-4882-A450-D610CB534214" module="sqlmin" rva="0x945594" /><frame id="24" address="0x7FF9C1F69E61" pdb="sqlmin.pdb" age="2" guid="1F0A3AE1-83BC-4882-A450-D610CB534214" module="sqlmin" rva="0x949E61" /><frame id="25" address="0x7FF9C168ABFA" pdb="sqlmin.pdb" age="2" guid="1F0A3AE1-83BC-4882-A450-D610CB534214" module="sqlmin" rva="0x6ABFA" /><frame id="26" address="0x7FF9BE7DBA62" pdb="sqllang.pdb" age="2" guid="BFE66178-A45A-4266-A816-406AEF56ADB4" module="sqllang" rva="0xBA62" /><frame id="27" address="0x7FF9BE7DBA9F" pdb="sqllang.pdb" age="2" guid="BFE66178-A45A-4266-A816-406AEF56ADB4" module="sqllang" rva="0xBA9F" /><frame id="28" address="0x7FF9BE7DE1B8" pdb="sqllang.pdb" age="2" guid="BFE66178-A45A-4266-A816-406AEF56ADB4" module="sqllang" rva="0xE1B8" /><frame id="29" address="0x7FF9BE7FEF4C" pdb="sqllang.pdb" age="2" guid="BFE66178-A45A-4266-A816-406AEF56ADB4" module="sqllang" rva="0x2EF4C" /><frame id="30" address="0x7FF9BE7FF31A" pdb="sqllang.pdb" age="2" guid="BFE66178-A45A-4266-A816-406AEF56ADB4" module="sqllang" rva="0x2F31A" /><frame id="31" address="0x7FF9BE7DC24F" pdb="sqllang.pdb" age="2" guid="BFE66178-A45A-4266-A816-406AEF56ADB4" module="sqllang" rva="0xC24F" /><frame id="32" address="0x7FF9BEAF2014" pdb="sqllang.pdb" age="2" guid="BFE66178-A45A-4266-A816-406AEF56ADB4" module="sqllang" rva="0x322014" /><frame id="33" address="0x7FF9BEAF19C7" pdb="sqllang.pdb" age="2" guid="BFE66178-A45A-4266-A816-406AEF56ADB4" module="sqllang" rva="0x3219C7" /><frame id="34" address="0x7FF9BE7DD211" pdb="sqllang.pdb" age="2" guid="BFE66178-A45A-4266-A816-406AEF56ADB4" module="sqllang" rva="0xD211" /><frame id="35" address="0x7FF9BEAF39C5" pdb="sqllang.pdb" age="2" guid="BFE66178-A45A-4266-A816-406AEF56ADB4" module="sqllang" rva="0x3239C5" /><frame id="36" address="0x7FF9BE7DC24F" pdb="sqllang.pdb" age="2" guid="BFE66178-A45A-4266-A816-406AEF56ADB4" module="sqllang" rva="0xC24F" /><frame id="37" address="0x7FF9BE7DC6CC" pdb="sqllang.pdb" age="2" guid="BFE66178-A45A-4266-A816-406AEF56ADB4" module="sqllang" rva="0xC6CC" /><frame id="38" address="0x646120223332223D" /><frame id="39" address="0x30223D7373657264" />
+</stackFrames>
+<executionStack>
+<frame procname="adhoc" line="16" stmtstart="478" stmtend="648" sqlhandle="0x020000001683042e93c58fc3b010cdd45d3adcf6253a69bc0000000000000000000000000000000000000000">
+unknown</frame>
+<frame procname="adhoc" line="16" stmtstart="478" stmtend="648" sqlhandle="0x0200000024244f25bf859f68ab83b9e417017ea90ceaa1f00000000000000000000000000000000000000000">
+unknown</frame>
+</executionStack>
+<inputbuf>
+BEGIN TRANSACTION;
+
+--using a blue pen
+
+UPDATE Production.Product
+SET NAME = 'HL Mountain Pedal - Blue'
+WHERE
+  ProductID = 710;
+
+--wait for deadlock happen
+
+WAITFOR DELAY '00:00:05';
+
+--need red pen but 2nd person has it 
+
+UPDATE Production.Product
+SET NAME = 'HL ROAD PEDAL - Red'
+WHERE 
+  ProductID = 711;
+
+COMMIT TRANSACTION;
+</inputbuf>
+</process>
+<process id="process1e9aaf73088" taskpriority="0" logused="1836" waitresource="KEY: 6:72057594049986560 (e1f099463fe7)" waittime="1866" ownerId="114863" transactionname="user_transaction" lasttranstarted="2025-06-15T18:28:22.677" XDES="0x1e9bc8b4470" lockMode="U" schedulerid="3" kpid="10828" status="suspended" spid="66" sbid="0" ecid="0" priority="0" trancount="2" lastbatchstarted="2025-06-15T18:28:22.647" lastbatchcompleted="2025-06-15T18:28:22.647" lastattention="1900-01-01T00:00:00.647" clientapp="Microsoft SQL Server Management Studio - Query" hostname="DESKTOP-QE346C3" hostpid="10452" loginname="DESKTOP-QE346C3\nisha" isolationlevel="read committed (2)" xactid="114863" currentdb="6" currentdbname="AdventureWorks2022" lockTimeout="4294967295" clientoption1="671090784" clientoption2="390200">
+<stackFrames>
+<frame id="00" address="0x7FFA20F50BE4" pdb="ntdll.pdb" age="1" guid="E84AF4A1-E3CD-FABC-99A4-1209581EB686" module="ntdll" rva="0xA0BE4" /><frame id="01" address="0x7FFA1E723EC9" pdb="kernelbase.pdb" age="1" guid="8DE470CE-6A35-310D-EB2D-AA4415DC675E" module="kernelbase" rva="0x123EC9" /><frame id="02" address="0x7FF9BD8C69F7" pdb="SqlDK.pdb" age="2" guid="DF33C098-9A00-452D-959F-F820E68C8B32" module="SqlDK" rva="0x69F7" /><frame id="03" address="0x7FF9BD8C691B" pdb="SqlDK.pdb" age="2" guid="DF33C098-9A00-452D-959F-F820E68C8B32" module="SqlDK" rva="0x691B" /><frame id="04" address="0x7FF9BD8C1B2B" pdb="SqlDK.pdb" age="2" guid="DF33C098-9A00-452D-959F-F820E68C8B32" module="SqlDK" rva="0x1B2B" /><frame id="05" address="0x7FF9BD8C3A77" pdb="SqlDK.pdb" age="2" guid="DF33C098-9A00-452D-959F-F820E68C8B32" module="SqlDK" rva="0x3A77" /><frame id="06" address="0x7FF9C16A9665" pdb="sqlmin.pdb" age="2" guid="1F0A3AE1-83BC-4882-A450-D610CB534214" module="sqlmin" rva="0x89665" /><frame id="07" address="0x7FF9C16A9465" pdb="sqlmin.pdb" age="2" guid="1F0A3AE1-83BC-4882-A450-D610CB534214" module="sqlmin" rva="0x89465" /><frame id="08" address="0x7FF9C162FBB4" pdb="sqlmin.pdb" age="2" guid="1F0A3AE1-83BC-4882-A450-D610CB534214" module="sqlmin" rva="0xFBB4" /><frame id="09" address="0x7FF9C1639EA8" pdb="sqlmin.pdb" age="2" guid="1F0A3AE1-83BC-4882-A450-D610CB534214" module="sqlmin" rva="0x19EA8" /><frame id="10" address="0x7FF9C163EB48" pdb="sqlmin.pdb" age="2" guid="1F0A3AE1-83BC-4882-A450-D610CB534214" module="sqlmin" rva="0x1EB48" /><frame id="11" address="0x7FF9C163A7BA" pdb="sqlmin.pdb" age="2" guid="1F0A3AE1-83BC-4882-A450-D610CB534214" module="sqlmin" rva="0x1A7BA" /><frame id="12" address="0x7FF9C163B1EF" pdb="sqlmin.pdb" age="2" guid="1F0A3AE1-83BC-4882-A450-D610CB534214" module="sqlmin" rva="0x1B1EF" /><frame id="13" address="0x7FF9C163B2D3" pdb="sqlmin.pdb" age="2" guid="1F0A3AE1-83BC-4882-A450-D610CB534214" module="sqlmin" rva="0x1B2D3" /><frame id="14" address="0x7FF9C169E9D9" pdb="sqlmin.pdb" age="2" guid="1F0A3AE1-83BC-4882-A450-D610CB534214" module="sqlmin" rva="0x7E9D9" /><frame id="15" address="0x7FF9BDEC1A67" pdb="SqlTsEs.pdb" age="2" guid="30BAAA79-460F-4350-A578-D09A021A9C41" module="SqlTsEs" rva="0x1A67" /><frame id="16" address="0x7FF9C169CAF6" pdb="sqlmin.pdb" age="2" guid="1F0A3AE1-83BC-4882-A450-D610CB534214" module="sqlmin" rva="0x7CAF6" /><frame id="17" address="0x7FF9C16402C9" pdb="sqlmin.pdb" age="2" guid="1F0A3AE1-83BC-4882-A450-D610CB534214" module="sqlmin" rva="0x202C9" /><frame id="18" address="0x7FF9C166A7B5" pdb="sqlmin.pdb" age="2" guid="1F0A3AE1-83BC-4882-A450-D610CB534214" module="sqlmin" rva="0x4A7B5" /><frame id="19" address="0x7FF9C16402C9" pdb="sqlmin.pdb" age="2" guid="1F0A3AE1-83BC-4882-A450-D610CB534214" module="sqlmin" rva="0x202C9" /><frame id="20" address="0x7FF9C166A27B" pdb="sqlmin.pdb" age="2" guid="1F0A3AE1-83BC-4882-A450-D610CB534214" module="sqlmin" rva="0x4A27B" /><frame id="21" address="0x7FF9C16402C9" pdb="sqlmin.pdb" age="2" guid="1F0A3AE1-83BC-4882-A450-D610CB534214" module="sqlmin" rva="0x202C9" /><frame id="22" address="0x7FF9C1F6637E" pdb="sqlmin.pdb" age="2" guid="1F0A3AE1-83BC-4882-A450-D610CB534214" module="sqlmin" rva="0x94637E" /><frame id="23" address="0x7FF9C1F65594" pdb="sqlmin.pdb" age="2" guid="1F0A3AE1-83BC-4882-A450-D610CB534214" module="sqlmin" rva="0x945594" /><frame id="24" address="0x7FF9C1F69E61" pdb="sqlmin.pdb" age="2" guid="1F0A3AE1-83BC-4882-A450-D610CB534214" module="sqlmin" rva="0x949E61" /><frame id="25" address="0x7FF9C168ABFA" pdb="sqlmin.pdb" age="2" guid="1F0A3AE1-83BC-4882-A450-D610CB534214" module="sqlmin" rva="0x6ABFA" /><frame id="26" address="0x7FF9BE7DBA62" pdb="sqllang.pdb" age="2" guid="BFE66178-A45A-4266-A816-406AEF56ADB4" module="sqllang" rva="0xBA62" /><frame id="27" address="0x7FF9BE7DBA9F" pdb="sqllang.pdb" age="2" guid="BFE66178-A45A-4266-A816-406AEF56ADB4" module="sqllang" rva="0xBA9F" /><frame id="28" address="0x7FF9BE7DE1B8" pdb="sqllang.pdb" age="2" guid="BFE66178-A45A-4266-A816-406AEF56ADB4" module="sqllang" rva="0xE1B8" /><frame id="29" address="0x7FF9BE7FEF4C" pdb="sqllang.pdb" age="2" guid="BFE66178-A45A-4266-A816-406AEF56ADB4" module="sqllang" rva="0x2EF4C" /><frame id="30" address="0x7FF9BE7FF31A" pdb="sqllang.pdb" age="2" guid="BFE66178-A45A-4266-A816-406AEF56ADB4" module="sqllang" rva="0x2F31A" /><frame id="31" address="0x7FF9BE7DC24F" pdb="sqllang.pdb" age="2" guid="BFE66178-A45A-4266-A816-406AEF56ADB4" module="sqllang" rva="0xC24F" /><frame id="32" address="0x7FF9BEAF2014" pdb="sqllang.pdb" age="2" guid="BFE66178-A45A-4266-A816-406AEF56ADB4" module="sqllang" rva="0x322014" /><frame id="33" address="0x7FF9BEAF19C7" pdb="sqllang.pdb" age="2" guid="BFE66178-A45A-4266-A816-406AEF56ADB4" module="sqllang" rva="0x3219C7" /><frame id="34" address="0x7FF9BE7DD211" pdb="sqllang.pdb" age="2" guid="BFE66178-A45A-4266-A816-406AEF56ADB4" module="sqllang" rva="0xD211" /><frame id="35" address="0x7FF9BEAF39C5" pdb="sqllang.pdb" age="2" guid="BFE66178-A45A-4266-A816-406AEF56ADB4" module="sqllang" rva="0x3239C5" /><frame id="36" address="0x7FF9BE7DC24F" pdb="sqllang.pdb" age="2" guid="BFE66178-A45A-4266-A816-406AEF56ADB4" module="sqllang" rva="0xC24F" /><frame id="37" address="0x7FF9BE7DC6CC" pdb="sqllang.pdb" age="2" guid="BFE66178-A45A-4266-A816-406AEF56ADB4" module="sqllang" rva="0xC6CC" /><frame id="38" address="0x646120223332223D" /><frame id="39" address="0x30223D7373657264" />
+</stackFrames>
+<executionStack>
+<frame procname="adhoc" line="15" stmtstart="458" stmtend="630" sqlhandle="0x020000001683042e93c58fc3b010cdd45d3adcf6253a69bc0000000000000000000000000000000000000000">
+unknown</frame>
+<frame procname="adhoc" line="15" stmtstart="458" stmtend="630" sqlhandle="0x02000000a286683732a1693b825798e852f98113352fe6400000000000000000000000000000000000000000">
+unknown</frame>
+</executionStack>
+<inputbuf>
+BEGIN TRANSACTION;
+
+--Using red pen
+
+UPDATE Production.Product
+SET NAME = 'HL Road Pedal - Red'
+WHERE ProductID = 711;
+
+--wait for deadlock happen
+
+WAITFOR DELAY '00:00:05';
+
+--need blue pen but 2nd person has it 
+
+UPDATE Production.Product
+SET NAME = 'HL Mountain Pedal - BlUE'
+WHERE ProductID = 710;
+
+COMMIT TRANSACTION;
+</inputbuf>
+</process>
+</process-list>
+<resource-list>
+<keylock hobtid="72057594049986560" dbid="6" objectname="AdventureWorks2022.Production.Product" indexname="PK_Product_ProductID" id="lock1e9a4cacd80" mode="X" associatedObjectId="72057594049986560">
+<owner-list>
+<owner id="process1e9aaf73088" mode="X" />
+</owner-list>
+<waiter-list>
+<waiter id="process1e9a4d7d088" mode="U" requestType="wait" />
+</waiter-list>
+</keylock>
+<keylock hobtid="72057594049986560" dbid="6" objectname="AdventureWorks2022.Production.Product" indexname="PK_Product_ProductID" id="lock1e9a4cb1700" mode="X" associatedObjectId="72057594049986560">
+<owner-list>
+<owner id="process1e9a4d7d088" mode="X" />
+</owner-list>
+<waiter-list>
+<waiter id="process1e9aaf73088" mode="U" requestType="wait" />
+</waiter-list>
+</keylock>
+</resource-list>
+</deadlock>
