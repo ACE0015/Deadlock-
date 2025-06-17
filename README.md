@@ -23,18 +23,13 @@ Generated sql
 * ADD TARGET package0.event_file
 >(we can use *WITH* statement as per the instruction needed)
 
-💥 Step 2: Reproduce the Deadlock
-Now, we'll cause the deadlock by updating two tables (Product and WorkOrder) in a conflicting order from two different sessions.
-Open a NEW Query Window in SSMS (Session 1).
-Open a SECOND Query Window in SSMS (Session 2).
-Execution Order:
-[!WARNING]
-The timing and order of these steps are critical. Follow them precisely.
-In Session 1, highlight and execute the first code block (the BEGIN TRANSACTION and the UPDATE Production.Product).
-Immediately switch to Session 2 and execute its first code block.
-Switch back to Session 1 and execute its second code block. It will appear to hang while Executing query.... This is expected; it's now waiting for Session 2.
-Switch back to Session 2 and execute its second code block. This completes the deadly embrace.
-Result:
+>💥 Step 2: Reproduce the Deadlock
+* Now, we'll cause the deadlock by updating a table (Production.Product) in a conflicting order from two different sessions. (we can also join other table on our need by using *JOIN*)
+* Opened a NEW Query Window in SSMS (Session 1).
+* Open a SECOND Query Window in SSMS (Session 2).
+* Execution: The timing and order of these steps are critical. Also run time between should be specific.
+* 🕙(In Our Query delay time is 00:00:05)
+>*Result:*
 After a few seconds (the deadlock monitor runs every 5 seconds), one session will fail. It has been chosen as the deadlock victim.
 Msg 1205, Level 13, State 51, Line X
 Transaction (Process ID XX) was deadlocked on lock resources with another process and has been chosen as the deadlock victim. Rerun the transaction.
