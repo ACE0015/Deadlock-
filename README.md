@@ -2,8 +2,11 @@
 >This repository is a hands-on lab where you'll become a master detective in the world of SQL Server concurrency.
 
 *🗺️ Our Investigation Workflow*
-We will follow a clear, five-step process to hunt down and resolve our deadlock.
-🛠️ Check the Kit ➡️ 💣 Set the Trap ➡️ 📸 Capture the Evidence ➡️ 📈 Analyze the Report ➡️ ✅ Crack the Case
+*🛠️ Check the Kit ➡️ 
+*💣 Set the Trap ➡️ 
+*📸 Capture the Evidence ➡️ 
+*📈 Analyze the Report ➡️ 
+*✅ Crack the Case
 Part 1: 💣 Setting the Trap - Creating the Deadlock
 First, we need to prepare our surveillance equipment (the Extended Events session) and then execute a "sting operation" to deliberately cause a deadlock.
 📸 Step 1: Create the Extended Events Session
