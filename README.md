@@ -37,23 +37,19 @@ Generated sql
 * Expanding our DeadlockDetectiveSession (or system_health) and right-click package0.event_file. Select View Target Data....
 * Click on the deadlock event in the top pane. In the details pane below, select the Deadlock tab.
 * This shows the graphical representation of the deadlock.
-> Some cases won't show our graph like in my case so we can use '.xdl' case here.
+> Some cases won't show our graph like in my case so we can use '.xdl' case here & also the '.xdl file' can be opened in SSMS anytime.
 
 **PART 4: Deadlock Graph - Analyzing our report**
 * 🔵 Ovals (Processes): These are our two sessions. The one with the "X" is the deadlock victim.
 * 📦 Rectangles (Resources): These are the database objects being locked (e.g., a KEY lock on an index).
 * ➡️ Arrows (Dependencies):
-   >An arrow from a process to a resource means: "This process is waiting to acquire a lock on this resource."
-   >An arrow from a resource to a process means: "This process owns a lock on this resource."
-   >
-[!TIP]
-Save the Evidence!
-You can save the deadlock graph for later analysis. Right-click in the deadlock graph view and select Export to -> .xdl File. This .xdl file can be opened by SSMS at any time.
-Part 3: 🔑 Cracking the Case - The Solution
-The investigation clearly shows the problem: the two processes lock the same tables but in a different order. The most common solution is to enforce a consistent resource access order.
-Here is the fixed code for Session 2, where we now access Product first, then WorkOrder, just like Session 1.
-Generated sql
--- FIXED SESSION 2: Accessing tables in the same order as Session 1.
+   > * An arrow from a process to a resource means: "This process is waiting to acquire a lock on this resource."
+   > * An arrow from a resource to a process means: "This process owns a lock on this resource."
+
+**PART 5: 🔑 Cracking the Case - The Solution**
+>The investigation clearly shows the problem: the two processes lock the same tables but in a different order. The most common solution is to enforce a consistent resource access order.
+
+* -- FIXED SESSION 2: Accessing tables in the same order as Session 1.
 
 BEGIN TRANSACTION;
 
@@ -75,7 +71,7 @@ COMMIT TRANSACTION;
 PRINT 'Fixed Session 2: Transaction committed.';
 Use code with caution.
 SQL
-With this change, a deadlock will no longer occur. Case closed.
+* With this change, a deadlock will no longer occur. Case closed.
 # 💡 Key Takeaways
 * Deadlocks occur when two or more processes have a circular dependency on locked resources.
 * You can reliably reproduce deadlocks by using multiple sessions and controlling the execution order of statements within transactions.
