@@ -21,15 +21,8 @@ Generated sql
 * CREATE EVENT SESSION [DeadlockDetectiveSession] ON SERVER
 * ADD EVENT sqlserver.xml_deadlock_report
 * ADD TARGET package0.event_file
->(we can use with statement as per the instruction needed)
+>(we can use *WITH* statement as per the instruction needed)
 
--- Start the session
-ALTER EVENT SESSION [DeadlockDetectiveSession] ON SERVER STATE = START;
-GO
-Use code with caution.
-SQL
-[!NOTE]
-If you prefer not to create a new session, you can use the default system_health session which also captures deadlocks.
 💥 Step 2: Reproduce the Deadlock
 Now, we'll cause the deadlock by updating two tables (Product and WorkOrder) in a conflicting order from two different sessions.
 Open a NEW Query Window in SSMS (Session 1).
