@@ -15,12 +15,12 @@
 
 **PART 2: 💣 Setting the Trap - Creating the Deadlock**
 >📸 Step 1: Create the Extended Events Session
-This T-SQL script creates a new XEvents session named DeadlockDetectiveSession. It will start automatically with the server and capture any deadlock reports to a file.
+* This T-SQL script creates a new XEvents session named DeadlockDetectiveSession. It will start automatically with the server and capture any deadlock reports to a file.
 Generated sql
--- Create a dedicated session to capture ONLY deadlock reports
-CREATE EVENT SESSION [DeadlockDetectiveSession] ON SERVER
-ADD EVENT sqlserver.xml_deadlock_report
-ADD TARGET package0.event_file
+* -- Create a dedicated session to capture ONLY deadlock reports
+* CREATE EVENT SESSION [DeadlockDetectiveSession] ON SERVER
+* ADD EVENT sqlserver.xml_deadlock_report
+* ADD TARGET package0.event_file
 >(we can use with statement as per the instruction needed)
 
 -- Start the session
