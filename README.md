@@ -11,19 +11,17 @@
 
 **PART 1: OUR KIT**
 > * Installation Check of SSMS21 (0r2016+)
-> * Database Check (in this case we are using adventworks22)
+> * Database Check (In this case we are using adventworks22)
 
-💣 Setting the Trap - Creating the Deadlock
-First, we need to prepare our surveillance equipment (the Extended Events session) and then execute a "sting operation" to deliberately cause a deadlock.
-📸 Step 1: Create the Extended Events Session
+**PART 2: 💣 Setting the Trap - Creating the Deadlock**
+>📸 Step 1: Create the Extended Events Session
 This T-SQL script creates a new XEvents session named DeadlockDetectiveSession. It will start automatically with the server and capture any deadlock reports to a file.
 Generated sql
 -- Create a dedicated session to capture ONLY deadlock reports
 CREATE EVENT SESSION [DeadlockDetectiveSession] ON SERVER
 ADD EVENT sqlserver.xml_deadlock_report
-ADD TARGET package0.event_file(SET filename=N'DeadlockDetectiveSession.xel',max_file_size=(5),max_rollover_files=(2))
-WITH (MAX_MEMORY=4096 KB,EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,MAX_DISPATCH_LATENCY=30 SECONDS,MAX_EVENT_SIZE=0 KB,MEMORY_PARTITION_MODE=NONE,TRACK_CAUSALITY=OFF,STARTUP_STATE=ON);
-GO
+ADD TARGET package0.event_file
+>(we can use with statement as per the instruction needed)
 
 -- Start the session
 ALTER EVENT SESSION [DeadlockDetectiveSession] ON SERVER STATE = START;
