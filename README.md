@@ -7,7 +7,13 @@
 * 📸 Capture the Evidence ➡️ 
 * 📈 Analyze the Report ➡️ 
 * ✅ Crack the Case ➡️
-Part 1: 💣 Setting the Trap - Creating the Deadlock
+
+
+**PART 1: OUR KIT**
+> * Installation Check of SSMS21 (0r2016+)
+> * Database Check (in this case we are using adventworks22)
+
+💣 Setting the Trap - Creating the Deadlock
 First, we need to prepare our surveillance equipment (the Extended Events session) and then execute a "sting operation" to deliberately cause a deadlock.
 📸 Step 1: Create the Extended Events Session
 This T-SQL script creates a new XEvents session named DeadlockDetectiveSession. It will start automatically with the server and capture any deadlock reports to a file.
