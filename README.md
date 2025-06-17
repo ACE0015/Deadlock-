@@ -1,8 +1,8 @@
 # Deadlock
 Checked kit for deadlock, set the trap (creating our deadlock), DEADLOCK Detective camera session (Extended Events), Excute the codes (running deadlock situation), Deadlocked Cracked(xml report analyze)
 
-[!IMPORTANT]
-Part 1: The Deadlock
+
+'''Part 1: The Deadlock'''
 
 Step 1: Create the Extended Events Session
 This T-SQL script creates a new XEvents session named DeadlockDetectiveSession. It will start automatically with the server and store its data in a file.
