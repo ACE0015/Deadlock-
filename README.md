@@ -29,11 +29,10 @@ Generated sql
 * Open a SECOND Query Window in SSMS (Session 2).
 * Execution: The timing and order of these steps are critical. Also run time between should be specific.
 * 🕙(In Our Query delay time is 00:00:05)
->*Result:*
-After a few seconds (the deadlock monitor runs every 5 seconds), one session will fail. It has been chosen as the deadlock victim.
-Msg 1205, Level 13, State 51, Line X
+>*Result: After a few seconds (the deadlock monitor runs every 5 seconds), one session will fail. It has been chosen as the deadlock victim.
+
 Transaction (Process ID XX) was deadlocked on lock resources with another process and has been chosen as the deadlock victim. Rerun the transaction.
-Part 2: 🔎 The Investigation - Finding the Evidence
+**PART 3: 🔎 The Investigation - Finding the Evidence**
 The error confirms a deadlock, but the deadlock report contains the crucial evidence we need to understand why.
 In SSMS Object Explorer, navigate to Management -> Extended Events -> Sessions.
 Expand your DeadlockDetectiveSession (or system_health) and right-click package0.event_file. Select View Target Data....
