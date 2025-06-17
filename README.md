@@ -1,4 +1,4 @@
-### 🕵️‍♂️ Deadlock Detective: A SQL Server Investigation
+# 🕵️‍♂️ Deadlock Detective: A SQL Server Investigation
 >This repository is a hands-on lab where you'll become a master detective in the world of SQL Server concurrency.
 
 *🗺️ Our Investigation Workflow:*
