@@ -14,7 +14,7 @@
 > * Database Check (In this case we are using adventworks22)
 
 **PART 2: 💣 Setting the Trap - Creating the Deadlock**
->📸 Step 1: Create the Extended Events Session
+*📸 Step 1: Create the Extended Events Session*
 * This T-SQL script creates a new XEvents session named DeadlockDetectiveSession. It will start automatically with the server and capture any deadlock reports to a file.
 Generated sql
 * -- Create a dedicated session to capture ONLY deadlock reports
@@ -23,7 +23,7 @@ Generated sql
 * ADD TARGET package0.event_file
 >(we can use *WITH* statement as per the instruction needed)
 
->💥 Step 2: Reproduce the Deadlock
+*💥 Step 2: Reproduce the Deadlock*
 * Now, we'll cause the deadlock by updating a table (Production.Product) in a conflicting order from two different sessions. (we can also join other table on our need by using *JOIN*)
 * Opened a NEW Query Window in SSMS (Session 1).
 * Open a SECOND Query Window in SSMS (Session 2).
@@ -53,19 +53,19 @@ Generated sql
 
 BEGIN TRANSACTION;
 
--- Step 1: Lock the Product table first.
+-- Step 1: Lock the Product Table First.
 PRINT 'Fixed Session 2: Attempting to update Product table...';
 UPDATE Production.Product
-SET ReorderPoint = ReorderPoint + 5
-WHERE ProductID = 798;
+SET  =
+WHERE ProductID = 711;
 PRINT 'Fixed Session 2: Product table update complete.';
 
--- Step 2: Now lock the WorkOrder table.
+-- Step 2: Table Second.
 PRINT 'Fixed Session 2: Attempting to update WorkOrder table...';
-UPDATE Production.WorkOrder
-SET DueDate = DATEADD(day, 1, DueDate)
-WHERE ProductID = 798;
-PRINT 'Fixed Session 2: WorkOrder table update complete.';
+UPDATE Production.Product
+SET  = 
+WHERE ProductID = 710;
+PRINT 'Fixed Session 2: Product table update complete.';
 
 COMMIT TRANSACTION;
 PRINT 'Fixed Session 2: Transaction committed.';
