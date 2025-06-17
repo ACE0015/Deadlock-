@@ -1,5 +1,5 @@
 ### DEADLOCK ###
--Checked kit for deadlock.
+-Checked kit for deadlock.-
 -set the trap (creating our deadlock).
 -DEADLOCK Detective camera session (Extended Events).
 -Excute the codes (running deadlock situation).
