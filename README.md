@@ -31,19 +31,21 @@ Generated sql
 * 🕙(In Our Query delay time is 00:00:05)
 >*Result: After a few seconds (the deadlock monitor runs every 5 seconds), one session will fail. It has been chosen as the deadlock victim.
 
-Transaction (Process ID XX) was deadlocked on lock resources with another process and has been chosen as the deadlock victim. Rerun the transaction.
-**PART 3: 🔎 The Investigation - Finding the Evidence**
-The error confirms a deadlock, but the deadlock report contains the crucial evidence we need to understand why.
-In SSMS Object Explorer, navigate to Management -> Extended Events -> Sessions.
-Expand your DeadlockDetectiveSession (or system_health) and right-click package0.event_file. Select View Target Data....
-Click on the deadlock event in the top pane. In the details pane below, select the Deadlock tab.
-This shows the graphical representation of the deadlock.
-How to Read the Deadlock Graph:
-🔵 Ovals (Processes): These are our two sessions. The one with the "X" is the deadlock victim.
-📦 Rectangles (Resources): These are the database objects being locked (e.g., a KEY lock on an index).
-➡️ Arrows (Dependencies):
-An arrow from a resource to a process means: "This process owns a lock on this resource."
-An arrow from a process to a resource means: "This process is waiting to acquire a lock on this resource."
+**PART 3: 🔎 The Investigation - Capturing the Evidence**
+* The error confirms a deadlock, but the deadlock report contains the crucial evidence we need to understand why.
+* In SSMS Object Explorer, navigate to Management -> Extended Events -> Sessions.
+* Expanding our DeadlockDetectiveSession (or system_health) and right-click package0.event_file. Select View Target Data....
+* Click on the deadlock event in the top pane. In the details pane below, select the Deadlock tab.
+* This shows the graphical representation of the deadlock.
+> Some cases won't show our graph like in my case so we can use '.xdl' case here.
+
+**PART 4: Deadlock Graph - Analyzing our report**
+* 🔵 Ovals (Processes): These are our two sessions. The one with the "X" is the deadlock victim.
+* 📦 Rectangles (Resources): These are the database objects being locked (e.g., a KEY lock on an index).
+* ➡️ Arrows (Dependencies):
+   >An arrow from a process to a resource means: "This process is waiting to acquire a lock on this resource."
+   >An arrow from a resource to a process means: "This process owns a lock on this resource."
+   >
 [!TIP]
 Save the Evidence!
 You can save the deadlock graph for later analysis. Right-click in the deadlock graph view and select Export to -> .xdl File. This .xdl file can be opened by SSMS at any time.
