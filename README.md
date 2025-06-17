@@ -1,7 +1,7 @@
 ### Deadlock
 Checked kit for deadlock, set the trap (creating our deadlock), DEADLOCK Detective camera session (Extended Events), Excute the codes (running deadlock situation), Deadlocked Cracked(xml report analyze)
 
-**##🕵️‍♂️ SQL Server Deadlock Detective**
+**##🕵️‍♂️ SQL Server Deadlock Detective##**
 This repository is a hands-on lab for creating, detecting, and resolving a classic SQL Server deadlock. We will act as detectives to set a trap, capture the evidence using Extended Events, and crack the case by analyzing the deadlock graph.
 
 **PART 1 : THE DEADLOCK - creating our own deadlock**
