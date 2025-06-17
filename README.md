@@ -76,9 +76,9 @@ PRINT 'Fixed Session 2: Transaction committed.';
 Use code with caution.
 SQL
 With this change, a deadlock will no longer occur. Case closed.
-💡 Key Takeaways
-Deadlocks occur when two or more processes have a circular dependency on locked resources.
-You can reliably reproduce deadlocks by using multiple sessions and controlling the execution order of statements within transactions.
-The xml_deadlock_report from Extended Events is your primary tool for investigating deadlocks.
-The deadlock graph provides an invaluable visual representation of the conflict.
-The most common prevention strategy is to enforce a consistent resource access order across all processes.
+# 💡 Key Takeaways
+* Deadlocks occur when two or more processes have a circular dependency on locked resources.
+* You can reliably reproduce deadlocks by using multiple sessions and controlling the execution order of statements within transactions.
+* The xml_deadlock_report from Extended Events is your primary tool for investigating deadlocks.
+* The deadlock graph provides an invaluable visual representation of the conflict.
+* The most common prevention strategy is to enforce a consistent resource access order across all processes.
