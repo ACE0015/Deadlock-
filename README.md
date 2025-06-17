@@ -2,7 +2,7 @@
 Checked kit for deadlock, set the trap (creating our deadlock), DEADLOCK Detective camera session (Extended Events), Excute the codes (running deadlock situation), Deadlocked Cracked(xml report analyze)
 
 
-'''Part 1: The Deadlock'''
+PART 1 : THE DEADLOCK - creating our own deadlock
 
 Step 1: Create the Extended Events Session
 This T-SQL script creates a new XEvents session named DeadlockDetectiveSession. It will start automatically with the server and store its data in a file.
@@ -21,7 +21,7 @@ Switch back to Session 2 and execute its second code block.
 Result: After a few seconds, one of your sessions (most likely Session 1) will fail with the following error, indicating it was chosen as the deadlock victim.
 
 
-Part 2: The Detective Work - Finding the Evidence
+PART 2 : DETECTIVE WORK - Finding the Evidence
 The error message tells us what happened, but not why. To find the root cause, we use the system_health Extended Events session, which is running by default on modern SQL Server instances.
 In SSMS Object Explorer, navigate to Management -> Extended Events -> Sessions.
 Expand system_health and right-click on package0.event_file. Select View Target Data....
@@ -41,7 +41,7 @@ An arrow from a process to a resource means "this process is waiting for a lock 
 By following the arrows, you can clearly see the circular wait: Session 1 owns a lock on Product and is waiting for WorkOrder, while Session 2 owns a lock on WorkOrder and is waiting for Product.
 
 
-PART 3: THE SOLUTION - FIXING THE CODE
+PART 3 : THE SOLUTION - fixing the code
 
 -- FIXED SESSION 2: Accessing tables in the same order as Session 1.
 
