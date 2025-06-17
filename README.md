@@ -49,7 +49,7 @@ An arrow from a process to a resource means "this process is waiting for a lock 
 By following the arrows, you can clearly see the circular wait: Session 1 owns a lock on Product and is waiting for WorkOrder, while Session 2 owns a lock on WorkOrder and is waiting for Product.
 **(Personally I had to make a .xdl file to repersent out graph)**
 
-PART 3 : THE SOLUTION - fixing the code
+**PART 3 : THE SOLUTION - fixing the code**
 
 -- FIXED SESSION 2: Accessing tables in the same order as Session 1.
 
