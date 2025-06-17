@@ -69,8 +69,7 @@ PRINT 'Fixed Session 2: Product table update complete.';
 
 COMMIT TRANSACTION;
 PRINT 'Fixed Session 2: Transaction committed.';
-Use code with caution.
-SQL
+
 * With this change, a deadlock will no longer occur. Case closed.
 # 💡 Key Takeaways
 * Deadlocks occur when two or more processes have a circular dependency on locked resources.
