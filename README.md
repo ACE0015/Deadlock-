@@ -13,6 +13,7 @@
 > * Database Check (In this case we are using adventworks22)
 
 > PART 2: 💣 Setting the Trap - Creating the Deadlock
+> 
 *📸 Step 1: Create the Extended Events Session*
 * This T-SQL script creates a new XEvents session named DeadlockDetectiveSession. It will start automatically with the server and capture any deadlock reports to a file.
 Generated sql
