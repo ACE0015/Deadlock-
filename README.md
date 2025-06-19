@@ -8,7 +8,7 @@
 * 📈 Analyze the Report ➡️ 
 * ✅ Crack the Case ➡️
 
-
+>
 **PART 1: OUR KIT**
 > * Installation Check of SSMS21 (0r2016+)
 > * Database Check (In this case we are using adventworks22)
