@@ -8,11 +8,11 @@
 * 📈 Analyze the Report ➡️ 
 * ✅ Crack the Case ➡️
 
-> **PART 1: OUR KIT**
+> PART 1: OUR KIT
 > * Installation Check of SSMS21 (0r2016+)
 > * Database Check (In this case we are using adventworks22)
 
-> **PART 2: 💣 Setting the Trap - Creating the Deadlock**
+> PART 2: 💣 Setting the Trap - Creating the Deadlock
 *📸 Step 1: Create the Extended Events Session*
 * This T-SQL script creates a new XEvents session named DeadlockDetectiveSession. It will start automatically with the server and capture any deadlock reports to a file.
 Generated sql
