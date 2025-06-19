@@ -12,7 +12,7 @@
 > * Installation Check of SSMS21 (0r2016+)
 > * Database Check (In this case we are using adventworks22)
 
-**PART 2: 💣 Setting the Trap - Creating the Deadlock**
+**PART 2: Setting the Trap - Creating the Deadlock**
 > 
 *📸 Step 1: Create the Extended Events Session*
 * This T-SQL script creates a new XEvents session named DeadlockDetectiveSession. It will start automatically with the server and capture any deadlock reports to a file.
@@ -31,7 +31,7 @@ Generated sql
 * 🕙(In Our Query delay time is 00:00:05)
 >*Result: After a few seconds (the deadlock monitor runs every 5 seconds), one session will fail. It has been chosen as the deadlock victim.
 
-**PART 3: 🔎 The Investigation - Capturing the Evidence**
+**PART 3: The Investigation - Capturing the Evidence**
 * The error confirms a deadlock, but the deadlock report contains the crucial evidence we need to understand why.
 * In SSMS Object Explorer, navigate to Management -> Extended Events -> Sessions.
 * Expanding our DeadlockDetectiveSession (or system_health) and right-click package0.event_file. Select View Target Data....
@@ -46,7 +46,7 @@ Generated sql
    > * An arrow from a process to a resource means: "This process is waiting to acquire a lock on this resource."
    > * An arrow from a resource to a process means: "This process owns a lock on this resource."
 
-**PART 5: 🔑 Cracking the Case - The Solution**
+**PART 5: Cracking the Case - The Solution**
 >The investigation clearly shows the problem: the two processes lock the same tables but in a different order. The most common solution is to enforce a consistent resource access order.
 
 * -- FIXED SESSION 2: Accessing tables in the same order as Session 1.
